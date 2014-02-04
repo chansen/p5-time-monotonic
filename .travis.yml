@@ -12,5 +12,6 @@ before_install:
   - "cpanm Module::Install::ReadmeFromPod"
   - "cpanm ExtUtils::CChecker"
   - "cpanm Test::More"
+install: true
 script: "perl Makefile.PL; make test"
 
