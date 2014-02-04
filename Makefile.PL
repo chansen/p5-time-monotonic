@@ -6,7 +6,7 @@ name                'Time-Monotonic';
 perl_version        '5.008001';
 all_from            'lib/Time/Monotonic.pm';
 repository          'http://github.com/chansen/p5-time-monotonic';
-readme_from         'lib/Time/Monotonic.pod';
+#readme_from         'lib/Time/Monotonic.pod';
 
 requires            'Carp'               => '0';
 requires            'Exporter'           => '0';
@@ -37,7 +37,7 @@ $cc->try_compile_run(
         int main(int argc, char *argv[]) {
             struct timespec ts;
             int ret = clock_gettime(CLOCK_MONOTONIC, &ts);
-            return 0;
+            return ret;
         }
 EOF
 $cc->try_compile_run(
